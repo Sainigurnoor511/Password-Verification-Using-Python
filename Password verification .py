@@ -1,7 +1,7 @@
 import hashlib
 import secrets
 import string
- 
+
 
 N = 7
 res = ''.join(secrets.choice(string.ascii_uppercase + string.digits)
@@ -37,7 +37,7 @@ class login :
 
         result = hashlib.sha256(saltedpassword.encode())
         hash = result.hexdigest()
-            
+
         if hash == signup.hash :
 
             print ( "\n Account Logged in ")
@@ -46,7 +46,7 @@ class login :
 
             print ( "\n ACCESS DENIED !")
 
-            
+
     else :
 
         print ("\n No Account with such username !")
